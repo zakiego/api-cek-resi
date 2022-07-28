@@ -6,8 +6,8 @@ interface PageProps {
 
 const Page = ({ children }: PageProps) => {
   return (
-    <Container>
-      <Flex mt="6" flexDir="column">
+    <Container maxWidth="3xl">
+      <Flex my="6" flexDir="column">
         {children}
       </Flex>
     </Container>

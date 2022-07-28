@@ -9,7 +9,7 @@ const Endpoint: React.FC = () => {
 
   return (
     <>
-      <Heading as="h2" size="md">
+      <Heading as="h2" size="md" opacity="70%">
         API
       </Heading>
       {isFilled ? (
@@ -18,7 +18,7 @@ const Endpoint: React.FC = () => {
         </Code>
       ) : (
         <Code py="2" mt="3" px="3">
-          <Text opacity="30%">{`https://resi-api.pages.dev/api/{ekspedisi}/{resi}`}</Text>
+          <Text opacity="30%">{`https://resi.pages.dev/api/{ekspedisi}/{resi}`}</Text>
         </Code>
       )}
     </>

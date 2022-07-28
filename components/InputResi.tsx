@@ -25,7 +25,9 @@ const InputResi = () => {
   return (
     <Box>
       <FormControl>
-        <FormLabel fontWeight="semibold">Resi</FormLabel>
+        <Heading as={FormLabel} size="md" opacity="70%">
+          Resi
+        </Heading>
         <Input
           value={resi}
           onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
@@ -36,7 +38,9 @@ const InputResi = () => {
       </FormControl>
 
       <FormControl pt="7">
-        <FormLabel fontWeight="semibold">Ekspedisi</FormLabel>
+        <Heading as={FormLabel} size="md" opacity="70%">
+          Ekspedisi
+        </Heading>
         <Stack direction="row">
           {listEkspedisi.map((item) => {
             const isSelected = item.id == ekspedisi;
