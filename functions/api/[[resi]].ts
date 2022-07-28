@@ -6,5 +6,5 @@ export async function onRequest(context: any) {
 
   const resp = await checkResi({ courier, awb });
 
-  return new Response(JSON.stringify({ ok: resp }));
+  return new Response(JSON.stringify({ ...resp }));
 }
