@@ -1,8 +1,7 @@
-import { HamburgerIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
+import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 import {
   Heading,
   HStack,
-  Icon,
   IconButton,
   Spacer,
   useColorMode,
