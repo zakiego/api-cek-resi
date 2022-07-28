@@ -9,18 +9,19 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@chakra-ui/icons": "^2.0.4",
     "@chakra-ui/react": "^2.2.4",
     "@emotion/react": "^11",
     "@emotion/styled": "^11",
     "cheerio": "1.0.0-rc.12",
     "framer-motion": "^6",
     "htmlparser2": "^8.0.1",
+    "jotai": "^1.7.6",
     "next": "12.2.3",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
   "devDependencies": {
+    "@chakra-ui/icons": "^2.0.4",
     "@next/eslint-plugin-next": "^12.1.6",
     "@types/cookie": "^0.5.1",
     "@types/eslint": "^8.4.5",
@@ -36,6 +37,7 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-simple-import-sort": "^7.0.0",
     "prettier": "^2.7.1",
+    "react-icons": "^4.4.0",
     "set-cookie-parser": "^2.5.1",
     "typescript": "4.7.4"
   }
