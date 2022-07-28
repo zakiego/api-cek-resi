@@ -15,5 +15,5 @@ export default async function handler(
 
   const resp = await checkResi({ courier, awb });
 
-  return res.json({ ok: resp });
+  return res.json({ ...resp });
 }
