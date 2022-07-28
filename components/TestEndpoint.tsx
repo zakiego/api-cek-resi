@@ -1,12 +1,15 @@
-import { Button } from "@chakra-ui/react";
+import { Button, Text } from "@chakra-ui/react";
 import { useAtomValue } from "jotai";
 import { useState } from "react";
 
-import { endpointAtom, isFilledAtom } from "./Atom";
+import { endpointAtom, endpointAtomLocalhost, isFilledAtom } from "./Atom";
 
 const TestEndpoint: React.FC = () => {
+  const env = process.env.NODE_ENV;
   const isFilled = useAtomValue(isFilledAtom);
-  const endpoint = useAtomValue(endpointAtom);
+  const endpoint = useAtomValue(
+    env == "development" ? endpointAtomLocalhost : endpointAtom,
+  );
 
   const [result, setResult] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -28,6 +31,7 @@ const TestEndpoint: React.FC = () => {
       >
         Coba API 🚀
       </Button>
+      <Text>{endpoint}</Text>
     </>
   );
 };
