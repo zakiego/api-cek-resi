@@ -1,3 +1,3 @@
 export const config = {
-  url: "https://resi-api.pages.dev",
+  url: "https://resi.pages.dev",
 };
