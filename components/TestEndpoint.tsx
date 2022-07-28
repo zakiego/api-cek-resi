@@ -19,7 +19,7 @@ const TestEndpoint: React.FC = () => {
     env == "development" ? endpointAtomLocalhost : endpointAtom,
   );
 
-  const { hasCopied, onCopy } = useClipboard(endpoint);
+  const { onCopy } = useClipboard(endpoint);
   const toast = useToast();
 
   const [result, setResult] = useState("");

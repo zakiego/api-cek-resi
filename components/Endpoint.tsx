@@ -1,7 +1,7 @@
-import { Code, Heading, Text, useColorMode } from "@chakra-ui/react";
+import { Code, Heading, Text } from "@chakra-ui/react";
 import { useAtomValue } from "jotai";
 
-import { ekspedisiAtom, endpointAtom, isFilledAtom, resiAtom } from "./Atom";
+import { endpointAtom, isFilledAtom } from "./Atom";
 
 const Endpoint: React.FC = () => {
   const endpoint = useAtomValue(endpointAtom);
