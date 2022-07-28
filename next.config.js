@@ -1,5 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  experimental: {
+    images: {
+      unoptimized: true,
+    },
+  },
   reactStrictMode: true,
   swcMinify: true, // https://nextjs.org/docs/advanced-features/compiler#minification
   async headers() {
