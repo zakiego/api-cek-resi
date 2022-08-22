@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "wrangle": "next build && next export && npx wrangler pages dev ./out"
   },
   "dependencies": {
     "@chakra-ui/react": "^2.2.4",
