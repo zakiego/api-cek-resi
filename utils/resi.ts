@@ -1,5 +1,6 @@
 import * as cheerio from "cheerio";
 import setCookie from "set-cookie-parser";
+
 import { Resi } from "~/types/resi";
 
 export const getCsrfCookie = async () => {
@@ -44,6 +45,12 @@ export const checkResi = async ({ courier, awb }: CheckResi) => {
 const parseResult = async (resp: string) => {
   const $ = cheerio.load(await resp);
   const status = $("h4").text().trim();
+  if (status.toLowerCase() == "not found") {
+    return {
+      ok: false,
+      status: "NOT FOUND",
+    };
+  }
   const awb = $("h5.name").first().text().trim();
   const courier = ($("img").first().attr("src") as string)
     .split("/")
@@ -58,5 +65,5 @@ const parseResult = async (resp: string) => {
     history.push({ id: (i + 1).toString(), step, desc });
   });
 
-  return { courier, status, awb, history };
+  return { ok: true, courier, status, awb, history };
 };
