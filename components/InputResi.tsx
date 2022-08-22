@@ -10,6 +10,7 @@ import { Box } from "@chakra-ui/react";
 import { useAtom } from "jotai";
 
 import { ekspedisiAtom, resiAtom } from "./Atom";
+import listEkspedisi from "./Ekspedisi";
 
 const InputResi = () => {
   const [resi, setResi] = useAtom(resiAtom);
@@ -52,12 +53,5 @@ const InputResi = () => {
     </Box>
   );
 };
-
-const listEkspedisi = [
-  { id: "jnt", name: "J&T Express" },
-  { id: "tiki", name: "TIKI" },
-  { id: "pos", name: "POS" },
-  { id: "sicepat", name: "SiCepat" },
-];
 
 export default InputResi;
