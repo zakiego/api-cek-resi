@@ -4,7 +4,7 @@ import {
   FormLabel,
   Heading,
   Input,
-  Stack,
+  SimpleGrid,
 } from "@chakra-ui/react";
 import { Box } from "@chakra-ui/react";
 import { useAtom } from "jotai";
@@ -35,12 +35,13 @@ const InputResi = () => {
         <Heading as={FormLabel} size="md" opacity="70%">
           Ekspedisi
         </Heading>
-        <Stack direction="row">
+        <SimpleGrid columns={2} spacing="8px">
           {listEkspedisi.map((item) => {
             const isSelected = item.id == ekspedisi;
             return (
               <Button
                 key={item.id}
+                size="sm"
                 colorScheme={isSelected ? "blue" : "gray"}
                 onClick={() => setEkspedisi(isSelected ? "" : item.id)}
               >
@@ -48,7 +49,7 @@ const InputResi = () => {
               </Button>
             );
           })}
-        </Stack>
+        </SimpleGrid>
       </FormControl>
     </Box>
   );
