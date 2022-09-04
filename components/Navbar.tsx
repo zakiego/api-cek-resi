@@ -23,7 +23,7 @@ const Navbar: React.FC = () => {
       <Spacer />
       <IconButton
         as="a"
-        href="https://github.com/zakiego"
+        href="https://github.com/zakiego/api-cek-resi"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Menu"
